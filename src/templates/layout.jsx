@@ -1,9 +1,8 @@
 import Grid from '@mui/material/Unstable_Grid2';
 import {Box, CssBaseline} from '@mui/material'
-import { grey } from '@mui/material/colors';
 
 export default function Layout({children}) {
-    const [header, menu] = children;
+    const [header, menu, kpi1, kpi2, kpi3, kpi4, sales, traffic] = children;
 
     return (
     <Box style={{display: "flex", height: "100vh"}}>
@@ -14,26 +13,26 @@ export default function Layout({children}) {
                     <Grid xs={12}>
                         {header}
                     </Grid>
-                    <Grid container>
+                    <Grid container sx={{justifyContent: "center", margin: "10px"}}>
                         <Grid xs={3} pr={2}>
-                        <Grid  bgcolor={grey[400]} height={200}>PKI</Grid>
+                        <Grid>{kpi1}</Grid>
                         </Grid>
                         <Grid xs={3} pr={2}>
-                        <Grid  bgcolor={grey[400]} height={200}>PKI</Grid>
+                        <Grid>{kpi2}</Grid>
                         </Grid>
                         <Grid xs={3} pr={2}>
-                        <Grid  bgcolor={grey[400]} height={200}>PKI</Grid>
+                        <Grid>{kpi3}</Grid>
                         </Grid>
                         <Grid xs={3}>
-                        <Grid  bgcolor={grey[400]} height={200}>PKI</Grid>
+                        <Grid>{kpi4}</Grid>
                         </Grid>
                     </Grid>
-                    <Grid container my={2}>
+                    <Grid container m={2}>
                         <Grid xs={8} pr={2}>
-                        <Grid  bgcolor={grey[400]} height={'50vh'}>CONTAINER 1</Grid>
+                        <Grid height={'50vh'}>{sales}</Grid>
                         </Grid>
                         <Grid xs={4}>
-                        <Grid  bgcolor={grey[400]} height={'50vh'}>CONTAINER 2</Grid>
+                        <Grid height={'50vh'}>{traffic}</Grid>
                         </Grid>
                     </Grid>
                 </Grid>

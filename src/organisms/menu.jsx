@@ -28,7 +28,7 @@ const tier = [
 
 export default function Menu() {
   return (
-    <Box sx={{bgcolor:'#192130', p:'12px'}} >
+    <Box sx={{bgcolor:'#192130', p:'12px', height:"100vh"}} >
         <Box> 
             <Avatar src={logo} sx={{my:2, width: 80}}/>
         </Box>
